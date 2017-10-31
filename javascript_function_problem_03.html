@@ -11,7 +11,7 @@ function sum(lo, hi) {
     for (i=lo; i<=hi; i++){
         result = result + i;
     }
-return result;
+return result; // 이게 없으면 함수가 끝나면 사라짐. sum함수를 쓰고나면 남는게 리턴.. 그랫서 expect(sum~, ~)이런식으로 비교할수 있음
 }exepect(sum(1, 2), 3);
        exepect(sum(1, 1), 1);
        exepect(sum(1, 100), 5050);
