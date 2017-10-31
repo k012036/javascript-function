@@ -1,0 +1,42 @@
+<html>
+<head>
+<script>
+var A_mid = 10;
+var A_end = 8;
+var B_mid = 1;
+var B_end = 2;
+var C_mid = 9;
+var C_end = 5;
+function exam_star(mid, end){
+	var result='';
+	    for(i=1; i<=mid; i++){
+        result += '*';
+    }
+	for(i=1; i<=10-mid; i++){
+		result += '_';
+    }
+	result += '+';
+	for(i=1; i<=end; i++){
+		result += '*';
+    }
+	for(i=1; i<=10-end; i++){
+		result += '_';
+    }
+	result += '=';
+		for(i=1; i<=mid+end; i++){
+        result += '*';
+    }
+	for(i=1; i<=20-(mid+end); i++){
+        result += '_';
+    }
+	console.log(result);
+}
+
+exam_star(A_mid,A_end);
+exam_star(B_mid,B_end);
+exam_star(C_mid,C_end);
+</script>
+</head>
+<body>
+</body>
+</html>

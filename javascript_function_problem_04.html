@@ -1,0 +1,46 @@
+<html>
+<head>
+<script>
+function print_star(n) {
+    var result ='';
+	    for(i=0; i<n; i++){
+        for(j=0; j<n-i-1; j++){ // 0,01,012,0123이 아니라 01234,01234,01234라는 걸 기억해야함 헷갈리지말것
+            result +=' ';
+        }
+        for(k=0; k<=i; k++){
+            result +='*';
+        }
+        result +='\n';
+    }
+return result;
+}// *
+       exepect(print_star(1), '*\n');
+       //  *
+       // **
+       exepect(print_star(2), ' *\n**\n');
+       //   *
+       //  **
+       // ***
+       exepect(print_star(3), '  *\n **\n***\n');
+       //    *
+       //   **
+       //  ***
+       // ****
+       exepect(print_star(4), '   *\n  **\n ***\n****\n');
+       //     *
+       //    **
+       //   ***
+       //  ****
+       // *****
+       exepect(print_star(5), '    *\n   **\n  ***\n ****\n*****\n');
+       function exepect(l, r) {
+         if (l === r)
+          console.log('pass');
+         else
+          console.log('fail');
+       }
+</script>
+</head>
+<body>
+</body>
+</html>
