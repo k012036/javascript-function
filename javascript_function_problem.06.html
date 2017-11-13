@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+      function print_scores_chart() {
+        // TODO : 여기에 여러분이 직접 코딩을 해주세요.
+        var al;
+        var result = "";
+        al = arguments.length;
+        for (var i = 0; i < al; i++) {
+            result += "**";
+        }
+        result += "\n";
+        for (var j = 10; j >= 1; j--) {
+            for (var i = 0; i < al; i++) {
+                if (arguments[i] >= j) {
+                    result += "* ";
+                } else result += "  ";
+            }
+            result += "\n";
+        }
+    
+        
+        for (var i = 0; i < al; i++) {
+            result += "**";
+        }
+        console.log(result);
+      }
+      print_scores_chart(1, 2, 3, 4, 5); // 5
+      print_scores_chart(10, 1, 10, 1, 5, 5); // 6
+      print_scores_chart(5, 2, 2, 9, 3, 5, 9); // 7
+    </script>
+</head>
+<body>
+</body>
+</html>
